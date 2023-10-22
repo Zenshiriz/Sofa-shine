@@ -10,10 +10,13 @@ export default function FurnitureDatails() {
     const filteredDataEl = filteredData.map(filteredData => (
       <>
       <div className='pt-16 md:pt-20 md:flex'>
-       <div key={filteredData.id} className='flex justify-center md:w-[50vw]'>
-        <img src={filteredData.img} loading='lazy' className=' w-[90%] shadow max-w-[520px]' alt="" />
+       <div key={filteredData.id} className='flex flex-col  md:w-[50vw]'>
+        <Link to='/furnitures' className=' ml-8'>
+        <button className=' self-start font-Poppins font-bold uppercase bg-gray-900 text-white  text-sm px-4 py-2 rounded-md mb-4'>return back to furniture's </button>
+        </Link>
+        <img src={filteredData.img} loading='lazy' className=' w-[90%]  shadow max-w-[520px] self-center' alt="" />
       </div>
-      <div className=' px-6 py-6 md:max-w-[340px] lg:max-w-[540px] '>
+      <div className=' px-6 py-12 md:max-w-[340px] lg:max-w-[540px] '>
         <p className=' font-Poppins uppercase font-bold text-lg md:text-2xl'>{filteredData.name}</p>
         <p className=' font-Poppins uppercase text-base md:text-xl'>₹ {filteredData.price}</p>
         <hr className=' text-gray-200 h-[2px] my-4'/>
